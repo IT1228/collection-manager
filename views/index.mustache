@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Submit a Book</h1>
+    <form method="POST" action"/{{.}}">
+        <input type="text" name="title" placeholder="Title">
+        <input type="text" name="author" placeholder="Author">
+        <input type="number" name="pages" placeholder="Pages">
+        <button type="submit" name="submit">Submit</button> 
+    </form>
+        <div class="list">
+        <h2>Books</h2>
+        <ul>
+          {{#books}}
+          <li><a href="{{_id}}">{{title}}</a></li>
+          {{/books}}
+        </ul>
+      </div>
+</body>
+</html>

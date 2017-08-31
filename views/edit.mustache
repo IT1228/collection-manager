@@ -1,0 +1,18 @@
+<html>
+    <head>
+    </head>
+    <body>
+    <a href="/">Main</a>
+    <h2>Edit Book</h2>
+        {{#book}}
+            <div class="edit">
+                <form action="/edit/{{_id}}" method='post'>
+                    <input type="text" name="title" value={{title}}>
+                    <input type="text" name="author" value={{author}}>
+                    <input type="number" name="pages" value={{pages}}>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        {{/book}}
+    </body>
+</html>

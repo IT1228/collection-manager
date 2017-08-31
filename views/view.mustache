@@ -1,0 +1,20 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <a href="/">Main</a>
+        {{#book}}
+            <div class="book">
+                <p>Title: {{title}}</p>
+                <p>Author: {{author}}</p>
+                <p>Pages: {{pages}}</p>
+            </div>
+            <br>
+            <a href="/edit/{{_id}}">Edit</a>
+            <form action="/delete/{{_id}}" method="POST">
+            <button class='delete' type="submit">Delete</button>
+            </form>
+        {{/book}}
+    </body>
+</html>
